@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('propietario', function (Blueprint $table) {
             $table->unsignedBigInteger("idPropietario")->primary();
             $table->foreign('idPropietario')->references('idPersona')->on('personas')->onDelete('cascade');
+            $table->string('password');
+            $table->string('email');
             $table->timestamps();
         });
     }

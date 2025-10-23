@@ -35,6 +35,6 @@ class Gerente extends Model
     // Relación con Persona
     public function persona()
     {
-        return $this->belongsTo(Persona::class,'idGerente', 'idPersona');
+        return $this->belongsTo(Persona::class, 'idGerente', 'idPersona');
     }
 }
